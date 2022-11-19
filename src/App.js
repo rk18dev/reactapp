@@ -1,25 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
+import Naviagation from './common/naviagation';
+import Gallery from './Albums/Gallery';
+import StateM from './Albums/StateM';
+import MyErrorBoundary from './Albums/MyErrorBoundary';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App=()=>{
+
+  let titleList=[
+      {
+        Id:1,
+        Name:"Home",
+        Uri:"/Home"
+      },
+      {
+        Id:1,
+        Name:"About",
+        Uri:"/About"
+      },
+      {
+        Id:1,
+        Name:"Contact",
+        Uri:"/Contact"
+      }
+    ];
+return <>
+  <div className=''>
+    <Naviagation titleList={titleList}/>
+    <MyErrorBoundary>
+    {/* <StateM/> */}
+    <Gallery/>
+    </MyErrorBoundary>
+    
+  </div>
+  </>
 }
-
 export default App;
