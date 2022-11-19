@@ -27,6 +27,7 @@ const App=()=>{
 return <>
   <div className=''>
     <Naviagation titleList={titleList}/>
+    <h1>Here is the list</h1>
     <MyErrorBoundary>
     {/* <StateM/> */}
     <Gallery/>
